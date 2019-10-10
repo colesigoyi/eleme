@@ -95,3 +95,42 @@ sqoop import \
 --hive-overwrite \
 --hive-table hzbbp_dim.dim_code_shop \
 -m 1
+############################## user ##################################
+
+hadoop fs -rm -r /user/root/user
+
+sqoop import \
+--connect jdbc:mysql://10.211.55.42:3306/hzbap_ods \
+--username root \
+--password 123456 \
+--table user \
+--hive-import \
+--hive-overwrite \
+--hive-table hzbbp_dim.dim_user \
+-m 1
+############################## user_addr ##################################
+
+hadoop fs -rm -r /user/root/user_addr
+
+sqoop import \
+--connect jdbc:mysql://10.211.55.42:3306/hzbap_ods \
+--username root \
+--password 123456 \
+--table user_addr \
+--hive-import \
+--hive-overwrite \
+--hive-table hzbbp_dim.dim_user_addr \
+-m 1
+############################## user_extend ##################################
+
+hadoop fs -rm -r /user/root/user_extend
+
+sqoop import \
+--connect jdbc:mysql://10.211.55.42:3306/hzbap_ods \
+--username root \
+--password 123456 \
+--table user_extend \
+--hive-import \
+--hive-overwrite \
+--hive-table hzbbp_dim.dim_user_extend \
+-m 1

@@ -86,43 +86,43 @@ CREATE TABLE if not exists `hzbbp_ods_tmp.order_item_tmp` (
 );
 
 
+--
+-- CREATE TABLE if not exists `hzbbp_ods_tmp.user_tmp` (
+--   `user_id` bigint,
+--   `user_name` string,
+--   `user_gender` int,
+--   `user_birthday` timestamp,
+--   `user_age` int,
+--   `constellation` string,
+--   `province` string,
+--   `city` string,
+--   `city_level` int,
+--   `e_mail` string,
+--   `op_mail` string,
+--   `mobile` bigint,
+--   `num_seg_mobile` int,
+--   `op_Mobile` string,
+--   `register_time` timestamp,
+--   `login_ip` string,
+--   `login_source` string,
+--   `request_user` string,
+--   `total_score` decimal(18,2),
+--   `used_score` decimal(18,2),
+--   `is_blacklist` int,
+--   `is_married` int,
+--   `education` string,
+--   `monthly_income` decimal(18,2),
+--   `profession` string,
+--   `create_date` timestamp
+-- );
 
-CREATE TABLE if not exists `hzbbp_ods_tmp.user_tmp` (
-  `user_id` bigint,
-  `user_name` string,
-  `user_gender` int,
-  `user_birthday` timestamp,
-  `user_age` int,
-  `constellation` string,
-  `province` string,
-  `city` string,
-  `city_level` int,
-  `e_mail` string,
-  `op_mail` string,
-  `mobile` bigint,
-  `num_seg_mobile` int,
-  `op_Mobile` string,
-  `register_time` timestamp,
-  `login_ip` string,
-  `login_source` string,
-  `request_user` string,
-  `total_score` decimal(18,2),
-  `used_score` decimal(18,2),
-  `is_blacklist` int,
-  `is_married` int,
-  `education` string,
-  `monthly_income` decimal(18,2),
-  `profession` string,
-  `create_date` timestamp
-);
-
-CREATE TABLE if not exists `hzbbp_ods_tmp.user_addr_tmp` (
-  `user_id` bigint,
-  `order_addr` string,
-  `user_order_flag` int,
-  `addr_id` bigint,
-  `arear_id` int
-);
+-- CREATE TABLE if not exists `hzbbp_ods_tmp.user_addr_tmp` (
+--   `user_id` bigint,
+--   `order_addr` string,
+--   `user_order_flag` int,
+--   `addr_id` bigint,
+--   `arear_id` int
+-- );
 
 CREATE TABLE if not exists `hzbbp_ods_tmp.user_app_click_log_tmp` (
   `log_id` bigint,
@@ -139,23 +139,23 @@ CREATE TABLE if not exists `hzbbp_ods_tmp.user_app_click_log_tmp` (
   `city` string
 );
 
-CREATE TABLE if not exists `hzbbp_ods_tmp.user_extend_tmp` (
-  `user_id` bigint,
-  `user_gender` bigint,
-  `is_pregnant_woman` int,
-  `is_have_children` int,
-  `is_have_car` int,
-  `phone_brand` string,
-  `phone_brand_level` string,
-  `phone_cnt` int,
-  `change_phone_cnt` int,
-  `is_maja` int,
-  `majia_account_cnt` int,
-  `loyal_model` string,
-  `shopping_type_model` string,
-  `weight` int,
-  `height` int
-);
+-- CREATE TABLE if not exists `hzbbp_ods_tmp.user_extend_tmp` (
+--   `user_id` bigint,
+--   `user_gender` bigint,
+--   `is_pregnant_woman` int,
+--   `is_have_children` int,
+--   `is_have_car` int,
+--   `phone_brand` string,
+--   `phone_brand_level` string,
+--   `phone_cnt` int,
+--   `change_phone_cnt` int,
+--   `is_maja` int,
+--   `majia_account_cnt` int,
+--   `loyal_model` string,
+--   `shopping_type_model` string,
+--   `weight` int,
+--   `height` int
+-- );
 
 CREATE TABLE if not exists `hzbbp_ods_tmp.user_pc_click_log_tmp` (
   `log_id` bigint,
@@ -195,3 +195,10 @@ drop table hzbbp_ods_tmp.user_app_click_log_tmp;
 drop table hzbbp_ods_tmp.user_extend_tmp;
 drop table hzbbp_ods_tmp.user_pc_click_log_tmp;
 drop table hzbbp_ods_tmp.user_tmp;
+
+drop table hzbbp_ods.ods_user;
+drop table hzbbp_ods.ods_user_addr;
+drop table hzbbp_ods.ods_user_extend;
+drop table hzbbp_ods_tmp.user_tmp;
+drop table hzbbp_ods_tmp.user_addr_tmp;
+drop table hzbbp_ods_tmp.user_extend_tmp;
