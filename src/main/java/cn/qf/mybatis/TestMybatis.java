@@ -1,8 +1,8 @@
 package cn.qf.mybatis;
 
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import cn.qf.pojo.User;
+import cn.qf.service.UserService;
+import cn.qf.service.impl.UserServiceImpl;
 import org.junit.Test;
 
 import java.util.List;
@@ -15,16 +15,16 @@ import java.util.List;
  **/
 
 public class TestMybatis {
+    private UserService userService = new UserServiceImpl();
 
     @Test
-    public void init() {
-        //1. 获取到sqlsession的对象
-        SqlSessionFactory factory = new SqlSessionFactoryBuilder()
-                .build(TestMybatis.class.getClassLoader().getResourceAsStream("mybatis-3.cfg.xml"));
-        //2. 获取到sqlsession
-        SqlSession sqlSession = factory.openSession();
-        //3. 查询用户
-        List<User> ulist = sqlSession.selectList("user.findList");
-        System.out.println(ulist);
+    public void test() {
+        List<User> list = userService.findList();
+        System.out.println(list);
+    }
+    @Test
+    public void insert() {
+        User user = new User(3, "xiaoming");
+        userService.add(user);
     }
 }

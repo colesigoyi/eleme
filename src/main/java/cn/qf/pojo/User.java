@@ -1,4 +1,4 @@
-package cn.qf.mybatis;
+package cn.qf.pojo;
 
 /**
  * @ program: eleme

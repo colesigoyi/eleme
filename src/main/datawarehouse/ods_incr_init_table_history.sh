@@ -26,7 +26,7 @@ hzbbp_ods.ods_us_order partition(dt) select *, date(order_date) dt "
 #hadoop fs -rm -r /user/root/biz_trade
 
 sqoop import \
---connect jdbc:mysql://10.211.55.42:3306/hzbap_ods \
+--connect jdbc:mysql://10.211.55.42:3306/hzbap_ods?tinyInt1isBit=false \
 --username root \
 --password 123456 \
 --table biz_trade \

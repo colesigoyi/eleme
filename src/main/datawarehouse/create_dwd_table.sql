@@ -12,7 +12,7 @@ CREATE TABLE hzbbp_dwd.dwd_biz_trade (
   amount decimal(18,2)  ,
   trade_type tinyint  ,
   trade_time timestamp  ,
-  dw_date timestamp
+  dw_date string
 )
 partitioned by (dt string)
 ;
@@ -65,7 +65,7 @@ CREATE TABLE hzbbp_dwd.dwd_order_delivery (
   create_time timestamp  ,
   update_time timestamp  ,
   addr_id bigint   ,
-  dw_date timestamp
+  dw_date string
 )
 partitioned by (dt string)
 ;
@@ -113,7 +113,7 @@ CREATE TABLE hzbbp_dwd.dwd_us_order (
   pay_type int   ,
   order_source string  ,
   update_time timestamp  ,
-   dw_date timestamp
+   dw_date string
 )
 partitioned by (dt string)
 ;

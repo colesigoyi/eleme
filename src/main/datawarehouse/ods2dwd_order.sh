@@ -15,3 +15,11 @@ insert overwrite table hzbbp_dwd.dwd_us_order partition(dt='2019-10-09')
 select *
 ;
 "
+
+################################ods_biz_trade##################################
+hive -e "
+from hzbbp_ods.ods_biz_trade
+insert overwrite table hzbbp_dwd.dwd_biz_trade partition(dt='2019-10-09')
+select *
+;
+"
